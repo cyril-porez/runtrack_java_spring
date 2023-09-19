@@ -1,0 +1,7 @@
+profiles:
+  active: prod
+  dev:
+    message: Bonjour !
+  prod:
+    message: Salutation !
+
