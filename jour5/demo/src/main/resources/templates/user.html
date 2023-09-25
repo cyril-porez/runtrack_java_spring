@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <body>
+      <div th:each="person : ${persons}">
+        <form action="/update" method="post">
+          <p th:text="${person.name}"></p>
+          <p th:text="${person.age}"></p>
+          <label for="name">Nom:</label>
+          <input type="text" name="name" id="" th:value="${person.name}" />
+
+          <!-- <label for="numb">Nombre:</label> -->
+          <!-- <input type="number" name="numb" id="" th:value="${person.number}" /> -->
+
+          <input type="submit" value="Modifier" />
+        </form>
+
+        <form action="/delete" method="post">
+          <input type="hidden" name="" th:value="${person.id}" />
+          <button type="submit">Supprimer</button>
+        </form>
+      </div>
+    </body>
+    <footer></footer>
+  </body>
+</html>
